@@ -42,30 +42,8 @@ console.log(empinfo);
 } */
 
 
-//delecting an element from the objects
-delete empinfo.empexp;
-console.log(empinfo)
+//checking the type of date ->empinfo
+console.log(typeof empinfo) //object
 
-/*output:
-{
-  empid: 6734,
-  empname: 'sasidhar',
-  emprole: 'QAEngineer',
-  isSalary: true,
-  empdomain: 'QA Engineer',
-  empadd: { estreet: 'road no 614', hno: '21-biswas', location: 560037 }
-}*/
-
-
-//delecting sub object from the objects
-delete empinfo.empadd;
-console.log(empinfo)
-
-/*output:
-{
-  empid: 6734,
-  empname: 'sasidhar',
-  emprole: 'QAEngineer',
-  isSalary: true,
-  empdomain: 'QA Engineer'
-}*/
+//checking the type of date ->empdata
+console.log(typeof empdata) //undefined

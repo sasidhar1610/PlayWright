@@ -42,30 +42,48 @@ console.log(empinfo);
 } */
 
 
-//delecting an element from the objects
-delete empinfo.empexp;
-console.log(empinfo)
+//checking existance of the key
+console.log("empdomain" in empinfo) //true
 
+//getting all keys
+console.log(Object.keys(empinfo))
+/*output
+[
+  'empid',
+  'empname',
+  'emprole',
+  'isSalary',
+  'empexp',
+  'empdomain',
+  'empadd'
+]*/
+
+
+//getting all values
+console.log(Object.values(empinfo))
 /*output:
-{
-  empid: 6734,
-  empname: 'sasidhar',
-  emprole: 'QAEngineer',
-  isSalary: true,
-  empdomain: 'QA Engineer',
-  empadd: { estreet: 'road no 614', hno: '21-biswas', location: 560037 }
-}*/
+[
+  6734,
+  'sasidhar',
+  'QAEngineer',
+  true,
+  6,
+  'QA Engineer',
+  { estreet: 'road no 614', hno: '21-biswas', location: 560037 }
+]*/
 
-
-//delecting sub object from the objects
-delete empinfo.empadd;
-console.log(empinfo)
-
-/*output:
-{
-  empid: 6734,
-  empname: 'sasidhar',
-  emprole: 'QAEngineer',
-  isSalary: true,
-  empdomain: 'QA Engineer'
-}*/
+//getting all entries
+console.log(Object.entries(empinfo))
+/*ouput:
+[
+  [ 'empid', 6734 ],
+  [ 'empname', 'sasidhar' ],
+  [ 'emprole', 'QAEngineer' ],
+  [ 'isSalary', true ],
+  [ 'empexp', 6 ],
+  [ 'empdomain', 'QA Engineer' ],
+  [
+    'empadd',
+    { estreet: 'road no 614', hno: '21-biswas', location: 560037 }
+  ]
+]*/
